@@ -2,7 +2,7 @@ package pt.gesmarapp.model;
 
 public class Vacina {
 
-    String nome; //Exemplo: Gripe, Febre Tifóide,Febre Amarela...
+    public String nome; //Exemplo: Gripe, Febre Tifóide,Febre Amarela...
     String doença;
     int anoDeValidade; // ano
     String fabricante;
@@ -14,6 +14,11 @@ public class Vacina {
         this.anoDeValidade = anoDeValidade;
         this.fabricante = fabricante;
         this.peso = peso;
+    }
+
+    @Override
+    public String toString() {
+        return "Vacina{" + "nome=" + nome + ", doen\u00e7a=" + doença + ", anoDeValidade=" + anoDeValidade + ", fabricante=" + fabricante + ", peso=" + peso + '}';
     }
 
 }

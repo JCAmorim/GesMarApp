@@ -9,6 +9,11 @@ public class LocalVacinacao {
     public LocalVacinacao(String nome) {
         this.nome = nome;
     }
+
+    @Override
+    public String toString() {
+        return "LocalVacinacao{" + "nome=" + nome + '}';
+    }
     
     
     

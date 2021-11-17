@@ -5,7 +5,7 @@ import java.util.Date;
 public class Marcação {
 //    Os fields, campos da classe
 
-    int idTipo;             //Exemplo: 001:Tétano.....
+     int idTipo;             //Exemplo: 001:Tétano.....
     public Vacina vacina;   //Exemplo: Tétano,Gripe..
     public LocalVacinacao local;      //Exemplo: Local de Vacinação
     public Date dataMarcacao;        //Exemplo: Data marcação da Vacina xx-
@@ -13,9 +13,14 @@ public class Marcação {
     int hora;
     int minutos;
 
-     public Marcação(Vacina vacina, LocalVacinacao local) {
+    public Marcação(Vacina vacina, LocalVacinacao local) {
         this.vacina = vacina;
         this.local = local;
+    }
+
+    @Override
+    public String toString() {
+        return "Marca\u00e7\u00e3o{" + "vacina=" + vacina + ", local=" + local + '}';
     }
 
 }
