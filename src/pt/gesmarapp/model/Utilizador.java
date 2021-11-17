@@ -8,6 +8,12 @@ public class Utilizador {
     public CartaoCidadao númeroCC;     //Exemplo: Cartão do Cidadão   
     Date dataNascimento;       //Exemplo: xx-xx-xxxx
     Morada morada;             // Exemplo: Morada      
-    public Marcação marcacao;         //Exemplo: Marcação de vacinação
+  //  public Marcação[] marcações;         //Exemplo: Marcação de vacinação
+  public Marcação[] marcações = new Marcação[4];
+
+    public Utilizador(String nomeCompleto, Marcação[] marcações) {
+        this.nomeCompleto = nomeCompleto;
+        this.marcações = marcações;
+    }
 
 }
