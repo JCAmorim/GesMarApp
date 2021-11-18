@@ -1,6 +1,5 @@
 package pt.gesmarapp.teste;
 
-import java.util.Arrays;
 import java.util.Date;
 import pt.gesmarapp.model.LocalVacinacao;
 import pt.gesmarapp.model.Marcação;
@@ -19,7 +18,7 @@ public class TesteGesMarApp {
 
     public static void carregar() {
 
-        vacina[0] = new Vacina("Vacina contra tétano", "Tétano", 2022, "Pfizer", 50.0);
+        vacina[0] = new Vacina("Vacina contra Tétano", "Tétano", 2022, "Pfizer", 50.0);
         vacina[1] = new Vacina("Vacina contra Covid-19", "Covid-19", 2024, "Pfizer", 25.0);
         vacina[2] = new Vacina("Vacina contra Febre Amarela", "Febre Amarela", 2023, "Astra Zeneca", 40.0);
 
@@ -45,13 +44,16 @@ public class TesteGesMarApp {
         // dentro da iteração, verificar se o utilizador tem uma marcação de tétano
         // quando tiver encontrado o tal utilizador, devolvê-lo (p.ex. saindo precocemente da iteração om "break")
         for (Utilizador utente : utentes) {
-            System.out.println("utente" + (utente));
-//              if(){
-//              // break             
-//              }else{
-//        }
+            for (int i = 0; i < (utente.marcações).length; i++) {
+                 System.out.println("Vacina " + utente.marcações[i].vacina.doença);
+                if (utente.marcações[i].vacina.doença.equals(nomeVacina)) {
+                    break;
+                } else {
+                    System.out.println("teste");
+                } 
+            }
+
         }
         return encontrado;
     }
-//}
 }
